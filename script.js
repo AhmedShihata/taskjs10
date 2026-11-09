@@ -39,16 +39,9 @@ log.addEventListener("submit", function (e) {
         }, 2000);
     }
     else {
-        failcount++
         sessionStorage.setItem("failcount");
         logmsg.textContent = "Incorrect email or password. Attempt:"
         logmsg.style.color = "red"
-    }
-    if (failcount >= 3) {
-        alert("You have exceeded the allowed number of incorrect attempts.")
-        setTimeout(function() {
-            window.location.href = "register.html"
-        }, 2000);
     }
 
 })
