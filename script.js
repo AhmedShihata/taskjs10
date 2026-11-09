@@ -26,14 +26,11 @@ let log = document.getElementById("login")
 log.addEventListener("submit", function (e) {
     e.preventDefault()
 
-    let mail = document.getElementById("email")
-    let pass = document.getElementById("password")
-
     // let fullName = localStorage.getItem("name")
     let storedmail = localStorage.getItem("email")
     let storedpass = localStorage.getItem("password")
 
-    if (mail.value === storedmail && pass.value === storedpass) {
+    if (email.value === storedmail && password.value === storedpass) {
         setTimeout(function () {
             window.location.href = "index.html"
         }, 2000);
